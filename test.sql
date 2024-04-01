@@ -1,150 +1,150 @@
 -- * SHOW DATABASES;
--- SHOW DATABASES
+SHOW DATABASES
 
 -- 1 CREATING NEW DATABASE
--- CREATE DATABASE MACHINES
+CREATE DATABASE MACHINES
 
 
 
 -- 2 DELETE DATABASE
--- DROP DATABASE MACHINES
+DROP DATABASE MACHINES
 
 
 
 -- 3 USE DATABASE
--- USE MACHINES;
+USE MACHINES;
 
 -- 4 CHECK  WHICH DATABASE WE ARE USING 
--- SELECT DATABASE()
+SELECT DATABASE()
 
 -- VARCHAR CAN STORE MAXIMUM LENGTH OF 50 CHARACTERS
 
 -- 5 CREATE TABLE IN PC DATABASE
---  CREATE TABLE GAMES (
---     name VARCHAR(50),
---     rating INT
--- );
+ CREATE TABLE GAMES (
+    name VARCHAR(50),
+    rating INT
+);
 
 
 -- 6 SHOW TABLES
--- SHOW TABLES;
+SHOW TABLES;
 
 -- 7 SHOW COLUMN FROM DATABASE TABLES
--- SHOW COLUMNS FROM GAMES
+SHOW COLUMNS FROM GAMES
 
 
 -- 8 DESCRIBE TABLES
--- DESCRIBE GAMES;
+DESCRIBE GAMES;
 
 
 -- 9 ADD DEFAULT VALUES TO TABLE
--- CREATE TABLE MOVIES (
---     name VARCHAR(50) DEFAULT 'Anonymous',
---     release_year INT DEFAULT 2025,
---     ratings INT 
--- );
+CREATE TABLE MOVIES (
+    name VARCHAR(50) DEFAULT 'Anonymous',
+    release_year INT DEFAULT 2025,
+    ratings INT 
+);
 
 -- 10 DROB TABLE  
--- DROP TABLE MOVIES
+DROP TABLE MOVIES
 
 
 --  CHAR is fixed-length and pads strings with spaces, while VARCHAR is variable-length and more space-efficient. Choose CHAR for fixed-length data and when retrieval speed is crucial, and VARCHAR for variable-length data with potential storage efficiency.
 
 -- 11 DATE ,TIME 
--- CREATE TABLE FILMS (
---     name VARCHAR(50),
---     release_year INT ,
---     ratings DECIMAL,
---     comment CHAR(10),
---     comment_date DATE DEFAULT "2024-04-01",
---     comment_time TIME DEFAULT "11:39:05"
--- )
+CREATE TABLE FILMS (
+    name VARCHAR(50),
+    release_year INT ,
+    ratings DECIMAL,
+    comment CHAR(10),
+    comment_date DATE DEFAULT "2024-04-01",
+    comment_time TIME DEFAULT "11:39:05"
+)
 
 -- 12 INSERT DATA LABELS INTO TABLES 
--- INSERT INTO FILMS (name, release_year,ratings, comment) 
--- VALUES("THOR",2016,4.0,"nice movie")
+INSERT INTO FILMS (name, release_year,ratings, comment) 
+VALUES("THOR",2016,4.0,"nice movie")
 
 -- 13 SELECT VALUES FROM TABLES
 -- * MEANS ALL PROPERTIES SLECTED FROM TABLES
--- SELECT * FROM  FILMS;
+SELECT * FROM  FILMS;
 
 -- 14 SELECT SPECIFIC PROPERTIES FROM TABLES
--- SELECT name FROM FILMS
+SELECT name FROM FILMS
 
 -- 15 SELECT MORE PROPERTIES FROM TABLES
--- SELECT name,ratings FROM FILMS
+SELECT name,ratings FROM FILMS
 
 -- 16 INSERT MANY VALUES INTO TABLES
--- INSERT INTO FILMS (name, release_year,ratings, comment) 
--- VALUES("THOR",2016,4.0,"nice movie"),
---       ("IRONMAN",2015,4.5,"best movie"),
---       ("AVENGERS",2019,5.0,"awesome"),
---       ("DARK KNIGHT",2012,5.0,"best ") 
+INSERT INTO FILMS (name, release_year,ratings, comment) 
+VALUES("THOR",2016,4.0,"nice movie"),
+      ("IRONMAN",2015,4.5,"best movie"),
+      ("AVENGERS",2019,5.0,"awesome"),
+      ("DARK KNIGHT",2012,5.0,"best ") 
 
 -- 17 PRIMARY/UNIQUE KEYS
--- CREATE TABLE SOFTWARE (
---     id INT PRIMARY KEY, 
---     technology VARCHAR(50),
---     languages VARCHAR(50)
--- );
--- INSERT INTO SOFTWARE (id, technology, languages) VALUES
--- ( 'Database Management System', 'SQL'),
--- (2, 'Web Development', 'HTML, CSS, JavaScript'),
--- (3, 'Programming Language', 'Python');
+CREATE TABLE SOFTWARE (
+    id INT PRIMARY KEY, 
+    technology VARCHAR(50),
+    languages VARCHAR(50)
+);
+INSERT INTO SOFTWARE (id, technology, languages) VALUES
+( 'Database Management System', 'SQL'),
+(2, 'Web Development', 'HTML, CSS, JavaScript'),
+(3, 'Programming Language', 'Python');
 
--- SELECT * FROM SOFTWARE
+SELECT * FROM SOFTWARE
 
 
--- DROP TABLE SOFTWARE
+DROP TABLE SOFTWARE
 
 -- 18 AUTO_INCREMENT
--- CREATE TABLE SOFTWARE (
---     id INT PRIMARY KEY AUTO_INCREMENT,
---     technology VARCHAR(50),
---     languages VARCHAR(50)
--- );
--- DESCRIBE SOFTWARE
+CREATE TABLE SOFTWARE (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    technology VARCHAR(50),
+    languages VARCHAR(50)
+);
+DESCRIBE SOFTWARE
 
--- INSERT INTO SOFTWARE (technology, languages) VALUES
--- ('Database Management System', 'SQL'),
--- ('Web Development', 'HTML, CSS, JavaScript'),
--- ('Programming Language', 'Python');
+INSERT INTO SOFTWARE (technology, languages) VALUES
+('Database Management System', 'SQL'),
+('Web Development', 'HTML, CSS, JavaScript'),
+('Programming Language', 'Python');
 
--- SELECT * FROM SOFTWARE;
+SELECT * FROM SOFTWARE;
 
 
 -- 19 WHERE(FILTER RECORDS)
---  SELECT * FROM FILMS WHERE ratings = 5
+ SELECT * FROM FILMS WHERE ratings = 5
 
---  SELECT name FROM FILMS WHERE ratings = 5
+ SELECT name FROM FILMS WHERE ratings = 5
 
---  SELECT name,comment FROM FILMS WHERE ratings = 5
+ SELECT name,comment FROM FILMS WHERE ratings = 5
 
 --  20 ALIASES
--- SELECT name AS film_name FROM FILMS 
+SELECT name AS film_name FROM FILMS 
 
--- SELECT ratings AS movie_ratings FROM FILMS 
+SELECT ratings AS movie_ratings FROM FILMS 
 
 
 -- 21 UPDATE DATA IN TABLES
--- UPDATE  FILMS 
--- SET name = "JAMES BOND"
--- WHERE name ="THOR"
+UPDATE  FILMS 
+SET name = "JAMES BOND"
+WHERE name ="THOR"
 
 -- UPDATE FILMS
--- SET name = "CAPTAIN AMERICA"
--- WHERE ratings IS NULL;
+SET name = "CAPTAIN AMERICA"
+WHERE ratings IS NULL;
 
--- UPDATE FILMS
--- SET ratings = 3.2
--- WHERE ratings =4.2;
+UPDATE FILMS
+SET ratings = 3.2
+WHERE ratings =4.2;
 
 
 -- 22 DELETE SPECIFIC COLUMNS
--- DELETE FROM FILMS
--- WHERE name ="JAMES BOND"
+DELETE FROM FILMS
+WHERE name ="JAMES BOND"
 
--- SELECT * FROM FILMS  
+SELECT * FROM FILMS  
 
 
 -- ----- FUNCTION --------
